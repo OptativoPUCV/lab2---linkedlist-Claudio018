@@ -82,7 +82,7 @@ void * prevList(List * list) {
     struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
     nodo = list->current;
     list->current = nodo->prev;
-    return nodo;
+    return nodo->data;
   }
   else{
    return NULL; 

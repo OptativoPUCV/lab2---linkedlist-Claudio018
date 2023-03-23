@@ -80,7 +80,7 @@ void * prevList(List * list) {
   if (list->current != NULL && list->current->prev != NULL)
   {
     struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
-    nodo = list->curret;
+    nodo = list->current;
     list->current = nodo->prev;
     return nodo;
   }

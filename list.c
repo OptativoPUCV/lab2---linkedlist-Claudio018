@@ -37,9 +37,10 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-  struct Node* nodo = (struct Node *) malloc(sizeof(Node));
-  if (nodo != NULL)
+  
+  if (list->head != NULL)
   {
+    struct* nodo = (struct Node *) malloc(sizeof(Node));
     nodo = list->head;
     list->current = nodo;
     return nodo->data;

@@ -84,7 +84,7 @@ void* prevList(List * list) {
     list->current = nodo->prev;
     void* data = nodo->prev->data;
     free(nodo);
-    return nodo->prev->data;
+    return data;
   }
   else{
    return NULL; 

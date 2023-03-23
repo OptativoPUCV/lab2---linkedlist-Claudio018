@@ -95,7 +95,7 @@ void pushFront(List * list, void * data) {
   struct Node* node = createNode(data);
   if(lista->head != NULL)
   {
-    nodo->next = list->head;
+    node->next = list->head;
     list->head->prev = node;
     list->head = node;
   }

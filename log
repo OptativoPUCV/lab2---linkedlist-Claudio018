@@ -248,3 +248,14 @@ Thu 23 Mar 2023 11:52:05 PM UTC:
  tests:  10|2
 total_score: 45/70
 1c20ae8
+Thu 23 Mar 2023 11:53:07 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:124:9: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  124 |     if (nodo->next = NULL)
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4ce82ec

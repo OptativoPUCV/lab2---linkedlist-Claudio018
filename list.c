@@ -42,7 +42,9 @@ void * firstList(List * list) {
   {
     struct Node* nodo = list->head;
     list->current = nodo;
-    return nodo->data;
+    void *data = nodo->data;
+    free(nodo);
+    return data;
   }
   else{
     return NULL;

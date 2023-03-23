@@ -77,7 +77,16 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    return NULL;
+  if (list->current != NULL && list->current->prev != NULL)
+  {
+    struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
+    nodo = list->curret;
+    list->current = nodo->prev;
+    return nodo;
+  }
+  else{
+   return NULL; 
+  }
 }
 
 void pushFront(List * list, void * data) {

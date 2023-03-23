@@ -106,3 +106,14 @@ Thu 23 Mar 2023 11:17:58 PM UTC:
  tests:  6|4
 total_score: 25/70
 83343d3
+Thu 23 Mar 2023 11:20:33 PM UTC: 
+ list.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:83:18: error: ‘List’ {aka ‘struct List’} has no member named ‘curret’; did you mean ‘current’?
+   83 |     nodo = list->curret;
+      |                  ^~~~~~
+      |                  current
+Compilation failed
+bd3007f

@@ -77,14 +77,13 @@ void * lastList(List * list) {
   }
 }
 
-void * prevList(List * list) {
+void* prevList(List * list) {
   if (list->current != NULL && list->current->prev != NULL)
   {
     struct Node* nodo = list->current;
     list->current = nodo->prev;
-    void* data = nodo->data;
-    free(nodo);
-    return data;
+    
+    return nodo->prev->data;
   }
   else{
    return NULL; 

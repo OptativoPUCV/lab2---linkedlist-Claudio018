@@ -93,7 +93,7 @@ void* prevList(List * list) {
 
 void pushFront(List * list, void * data) {
   struct Node* node = createNode(data);
-  if(lista->head != NULL)
+  if(list->head != NULL)
   {
     node->next = list->head;
     list->head->prev = node;

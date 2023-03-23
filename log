@@ -20,3 +20,26 @@ Thu 23 Mar 2023 10:07:47 PM UTC:
  tests:  1|5
 total_score: 10/70
 f59a849
+Thu 23 Mar 2023 10:14:35 PM UTC: 
+ list.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:40:15: error: invalid initializer
+   40 |   Node nodo = (List *) malloc(sizeof(Node));
+      |               ^
+list.c:41:10: error: incompatible types when assigning to type ‘Node’ from type ‘Node *’
+   41 |   nodo = list->head;
+      |          ^~~~
+list.c:42:19: error: incompatible types when assigning to type ‘Node *’ from type ‘Node’
+   42 |   list->current = nodo;
+      |                   ^~~~
+list.c:43:10: error: incompatible types when returning type ‘Node’ but ‘void *’ was expected
+   43 |   return nodo;
+      |          ^~~~
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3eceb56

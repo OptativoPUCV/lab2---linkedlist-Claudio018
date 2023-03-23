@@ -40,7 +40,7 @@ void * firstList(List * list) {
   
   if (list->head != NULL)
   {
-    struct* nodo = (struct Node *) malloc(sizeof(Node));
+    struct Node* nodo = (struct Node *) malloc(sizeof(Node));
     nodo = list->head;
     list->current = nodo;
     return nodo->data;

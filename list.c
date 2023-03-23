@@ -82,7 +82,8 @@ void* prevList(List * list) {
   {
     struct Node* nodo = list->current;
     list->current = nodo->prev;
-    
+    void* data = nodo->prev->data;
+    free(nodo);
     return nodo->prev->data;
   }
   else{

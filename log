@@ -185,3 +185,14 @@ Thu 23 Mar 2023 11:35:27 PM UTC:
  tests:  9|3
 total_score: 35/70
 ea993b7
+Thu 23 Mar 2023 11:35:51 PM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:85:11: error: unused variable ‘data’ [-Werror=unused-variable]
+   85 |     void* data = nodo->prev->data;
+      |           ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+04bbcb1

@@ -51,7 +51,16 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    return NULL;
+    if (list->current != NULL && list->current->next != NULL)
+    {
+      struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
+      nodo = list->current->next;
+      list->current = nodo;
+      return nodo->data;
+    }
+    else{
+      return NULL;
+    }
 }
 
 void * lastList(List * list) {

@@ -54,7 +54,7 @@ void * firstList(List * list) {
 void * nextList(List * list) {
     if (list->current != NULL && list->current->next != NULL)
     {
-      struct Node* nodo = list->current->next);
+      struct Node* nodo = list->current->next;
       list->current = nodo;
       void *data = nodo->data;
       free(nodo);

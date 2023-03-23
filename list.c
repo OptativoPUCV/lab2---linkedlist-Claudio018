@@ -119,7 +119,7 @@ void pushCurrent(List * list, void * data) {
   struct Node* nodo = createNode(data);
   struct Node* actual = list->current;
   nodo->next = actual->next;
-  actual->next = actual;
+  actual->next = nodo;
   nodo->prev = actual;
   if (nodo->next == NULL)
   {

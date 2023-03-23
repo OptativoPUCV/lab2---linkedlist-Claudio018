@@ -79,10 +79,11 @@ void * lastList(List * list) {
 void * prevList(List * list) {
   if (list->current != NULL && list->current->prev != NULL)
   {
-    struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
-    nodo = list->current;
+    struct Node* nodo = list->current;
     list->current = nodo->prev;
-    return nodo->data;
+    void* data = nodo->data;
+    free(nodo);
+    return data;
   }
   else{
    return NULL; 

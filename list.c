@@ -120,6 +120,7 @@ void pushCurrent(List * list, void * data) {
     struct Node* actual = list->current;
     nodo->next = actual->next;
     actual->next = actual;
+    nodo->prev = actual;
     
   }
   

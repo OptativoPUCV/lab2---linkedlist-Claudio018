@@ -135,3 +135,13 @@ Thu 23 Mar 2023 11:25:19 PM UTC:
  tests:  6|4
 total_score: 25/70
 c5e75d8
+Thu 23 Mar 2023 11:27:23 PM UTC: 
+ list.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:69:35: error: expected ‘,’ or ‘;’ before ‘)’ token
+   69 |     struct Node* nodo = list->tail);
+      |                                   ^
+Compilation failed
+4e1610b

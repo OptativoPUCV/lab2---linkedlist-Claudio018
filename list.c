@@ -66,8 +66,7 @@ void * nextList(List * list) {
 void * lastList(List * list) {
   if (list->tail != NULL)
   {
-    struct Node* nodo = (struct Node *) malloc(sizeof(struct Node));
-    nodo = list->tail;
+    struct Node* nodo = list->tail);
     list->current = nodo;
     return nodo->data;
   }

@@ -114,19 +114,21 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
   if(list->current == NULL){
     pushFront(list,data);
+    return;
+  }
+  struct Node* nodo = createNode(data);
+  struct Node* actual = list->current;
+  nodo->next = actual->next;
+  actual->next = actual;
+  nodo->prev = actual;
+  if (nodo->next == NULL)
+  {
+    list->tail = nodo;
   }
   else{
-    struct Node* nodo = createNode(data);
-    struct Node* actual = list->current;
-    nodo->next = actual->next;
-    actual->next = actual;
-    nodo->prev = actual;
-    if (nodo->next == NULL)
-    {
-      list->tail = nodo;
-    }
-    
+      nodo->next->prev = nodo;
   }
+    
   
 }
 

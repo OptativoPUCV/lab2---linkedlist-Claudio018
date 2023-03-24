@@ -162,6 +162,8 @@ void * popCurrent(List * list) {
   else{
     actual->next->prev = actual->prev;
   }
+
+  return data;
 }
 
 void cleanList(List * list) {

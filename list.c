@@ -164,6 +164,7 @@ void * popCurrent(List * list) {
   }
 
   list->current = actual->next;
+  free(actual);
   return data;
 }
 

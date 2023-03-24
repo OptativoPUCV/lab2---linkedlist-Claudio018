@@ -155,7 +155,7 @@ void * popCurrent(List * list) {
     actual->prev->next = actual->next;
   }
 
-  if (actual == list->current)
+  if (actual == list->tail)
   {
     list->tail = actual->prev;
   }

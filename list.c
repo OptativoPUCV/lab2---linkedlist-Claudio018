@@ -128,8 +128,6 @@ void pushCurrent(List * list, void * data) {
   else{
       nodo->next->prev = nodo;
   }
-    
-  
 }
 
 void * popFront(List * list) {
@@ -143,7 +141,19 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  if (list = NULL)
+  {
     return NULL;
+  }
+  struct Node* actual = list->current;
+  void* data = actual->data;
+
+  if (actual == list->head){
+    list->head = actual->next;
+  }
+  else{
+    actual->prev->next = actual->next;
+  }
 }
 
 void cleanList(List * list) {

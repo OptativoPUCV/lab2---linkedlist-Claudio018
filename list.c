@@ -154,6 +154,14 @@ void * popCurrent(List * list) {
   else{
     actual->prev->next = actual->next;
   }
+
+  if (actual == list->current)
+  {
+    list->tail = actual->prev;
+  }
+  else{
+    actual->next->prev = actual->prev;
+  }
 }
 
 void cleanList(List * list) {
